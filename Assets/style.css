@@ -1,0 +1,201 @@
+:root {
+    --charcoal: #2e4052;
+    --tea-green: #bdd9bf;
+    --sunglow: #ffc857;
+    --snow: #f7f3f4;
+  }
+ /*to do 
+ link repository, add image (done)
+ make first card larger (kinda done)
+ add mobile rules  */
+ 
+ body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--snow);
+    background-color: var(--charcoal);
+  }
+
+.header {
+    background-color:var(--charcoal);
+    color: var(--sunglow);
+    border-bottom: 12px double var(--tea-green);
+    position: flex;
+}
+
+.header .title {
+    text-align: center;
+    size: 30px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.title {
+    list-style:none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    gap: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    left: 33%;
+    right: 33%;
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+h2 {
+    color: var(--tea-green);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight:lighter ;
+}
+
+h4 {
+    position: absolute;
+    background-color: rgba(189, 217, 191, .75);
+    color: var(--charcoal);
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-left: -30px;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--snow);
+}
+
+a:hover {
+    color: var(--sunglow);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.about-me img {
+    position: relative;
+    left: 16.5%;
+    margin-top: -10px;
+    width: 66%;
+}
+
+.about-me-text {
+    text-align: center;
+    width: 66%;
+    font-size: 20px;
+    line-height: 1.5;
+ }
+
+.justify-center {
+    justify-content:center;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -3rem; /* I don't understand why margin is requred to create wrapping, and the rem unit */
+    margin-right: -3rem;
+}
+
+.work-gallery {
+    text-align: center;
+    size: 30px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.gallery-card { /* border comes down too low on the bottom */
+    width: 33%;
+    border: 5px solid var(--tea-green);
+    overflow: hidden;
+}
+
+.gallery-card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.gallery-card:first-child {
+    width: 72%;
+    height: auto;
+}
+
+.gallery-card:hover {
+    border: 5px solid var(--sunglow);
+ }
+
+ .contact { /* can't center the li */
+    list-style:none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+ }
+
+ .contact li {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+
+@media screen and (max-width:500px) {
+    .title {
+        font-size: 20px;
+        gap:20px;
+    }
+
+    .gallery-card {
+        width: 50%;
+        border: none;
+        border-bottom: 5px solid var(--tea-green);
+    }
+
+    h4 {
+        position: relative;
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .cards figure {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    .work-gallery {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+ }
